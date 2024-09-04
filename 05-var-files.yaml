@@ -5,6 +5,7 @@
   vars_prompt:
   - name: FULL_NAME
     prompt: Enter your full name
+    private: false
   tasks: #list of tasks/modules/collections
   - name: ping the server
     ansible.builtin.debug:
