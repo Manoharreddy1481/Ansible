@@ -2,17 +2,17 @@
   hosts: web #which hosts your ansible wants to connect
   # vars_files:
   # - vars.yaml
-  vars_prompt:
-  - name: FULL_NAME
-    prompt: Enter your full name
-    private: false
+  # vars_prompt:
+  # - name: FULL_NAME
+  #   prompt: Enter your full name
+  #   private: false
   tasks: #list of tasks/modules/collections
   - name: ping the server
     ansible.builtin.debug:
-      msg: "Name is {{FULL_NAME}}"
+      msg: "Name is {{NAME}}"
   - name: ping the server
     ansible.builtin.debug:
-      msg: "Name is {{FULL_NAME}}"
+      msg: "Name is {{NAME}}"
   - name: ping the server
     ansible.builtin.debug:
-      msg: "Name is {{FULL_NAME}}"
+      msg: "Name is {{NAME}}"
