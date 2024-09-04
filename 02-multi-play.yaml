@@ -1,5 +1,12 @@
-- name: ping the server
+- name: Play-01
   hosts: web #which hosts your ansible wants to connect
   tasks: #list of tasks/modules/collections
   - name: ping the server
     ansible.builtin.debug:
+      msg: "Manohar"
+- name: Play-02
+  hosts: web #which hosts your ansible wants to connect
+  tasks: #list of tasks/modules/collections
+  - name: ping the server
+    ansible.builtin.debug:
+      msg: "Lucky"
