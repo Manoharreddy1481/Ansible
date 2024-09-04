@@ -11,3 +11,6 @@
      NAME: Lucky
     ansible.builtin.debug:
       msg: "Name is {{NAME}}"
+  - name: ping the server
+    ansible.builtin.debug:
+      msg: "Name is {{NAME}}"
