@@ -7,8 +7,6 @@
     ansible.builtin.debug:
       msg: "Name is {{NAME}}"
   - name: ping the server
-    vars:
-     NAME: Lucky
     ansible.builtin.debug:
       msg: "Name is {{NAME}}"
   - name: ping the server
