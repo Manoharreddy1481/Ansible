@@ -5,4 +5,4 @@
   - name: installing nginx in node server
     ansible.builtin.package:
       name: nginx
-      state: installed
+      state: [resent]
