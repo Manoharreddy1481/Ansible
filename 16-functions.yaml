@@ -47,5 +47,10 @@
         - {'key': 'duration', 'value': 120}
     ansible.builtin.debug:
       msg: " Maps are :{{course | items2dict}}"
+  - name: check the ip address i svalid or not 
+    vars:
+      ip_address: "182.12.13.14"
+    ansible.builtin.debug:
+      msg: " Ip address is : {{ip_address | ansible.utils.ipv4}}"
 
 
