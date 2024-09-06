@@ -5,5 +5,5 @@
   - name: execute the shell command
     ansible.builtin.shell: ls -ltr > manohar.txt
   - name: execute the command
-    ansible.builtin.command: cat manohar.txt
+    ansible.builtin.command: grep manohar | ls
 
