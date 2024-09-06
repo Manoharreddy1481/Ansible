@@ -1,0 +1,17 @@
+- name: chekc user is create dor not
+  hosts: web
+  tasks:
+    - name: check the user exist or not
+      ansible.builtin.command: id expense
+      register: user
+      ignore_errors: true
+
+    - name: grtting the user info
+      ansible.builtin.debug:
+        msg: "USer info: {{user}}"
+    
+    - name: adding the user
+      ansible.builtin.command: useradd expense
+      when: user.rc!=0
+    
+    
