@@ -31,3 +31,11 @@
       numbers: [1,2,3,4,0,-1]
     ansible.builtin.debug:
       msg: "Maximum number is :{{ numbers | max }}"
+
+  - name: convert maps to list
+    vars:
+      course:
+        Name: "Devops"
+        duration: "120hrs"
+    ansible.builtin.debug:
+      msg: "maps to list is {{ Course | items2dict }}"
