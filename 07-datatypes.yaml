@@ -1,0 +1,22 @@
+- name: list of data types
+  hosts: local
+  connection: local
+  vars:
+    Name: "Manohar"
+    age: 25
+    topics:
+    - Linux
+    - Shell
+    - Ansible
+    live: true
+    tools:
+      ci: jenkins
+      cm: Ansible
+      iac: terraform
+  tasks:
+  - name: print datatypes
+    ansible.builtin.debug:
+      msg: "Hi my name is: {{Name}} and age is: {{age}}, learning topics are {{topics}} and it is in {{live}} sessions. 
+            the tools whicih we are using here is {{tools}}"
+
+
