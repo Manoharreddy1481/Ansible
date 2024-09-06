@@ -48,9 +48,11 @@
     ansible.builtin.debug:
       msg: " Maps are :{{course | items2dict}}"
   - name: check the ip address i svalid or not 
-    vars:
-      ip_address: "182.12.13.14"
+    vars_promt:
+      name: Ip address
+      promt: Enter your Ip Address
+      private: false
     ansible.builtin.debug:
-      msg: " Ip address is : {{ip_address | ansible.utils.ipv4}}"
+      msg: " Ip address is : {{ name  | ansible.utils.ipv4}}"
 
 
