@@ -9,8 +9,10 @@
     vars:
       Name: "Manohar"
     ansible.builtin.debug:
-      msg: "My name is {{Name | upper}}" ,
-  - name: working on upper filter
+      msg: "My name is {{ Name | upper }}" ,
+  - name: working on lower filter
+    vars:
+      Name: "Manohar"
     ansible.builtin.debug:
       msg: "My name is {{ Name | lower }}"
   - name: working on get unque numbers in a list
