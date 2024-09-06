@@ -36,6 +36,6 @@
     vars:
       course:
         Name: "Devops"
-        duration: "120hrs"
+        duration: 120
     ansible.builtin.debug:
       msg: "maps to list is {{ Course | dict2items }}"
