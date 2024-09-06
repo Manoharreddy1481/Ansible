@@ -2,11 +2,11 @@
   hosts: web
   become: yes
   tasks:
-    - name: installing and uninstalling some of the packages
-      ansible.builtin.package:
-        name:"{{ item.name }}"
-        state:"{{ item.state }}"
-      loop:
+  - name: installing and uninstalling some of the packages
+    ansible.builtin.package:
+        name: "{{ item.name }}"
+        state: "{{ item.state }}"
+    loop:
       - { name:'mysql', state:'absent' }
       - { name:'nginx', state:'absent' }
 
