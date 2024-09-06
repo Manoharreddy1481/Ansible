@@ -5,9 +5,17 @@
   - name: working on default functions
     ansible.builtin.debug:
       msg: " Hi {{ Name | default('Manohar')}}"
-  - name: working on upper and lower filters
+  - name: working on upper filter
     vars:
       Name: "Manohar"
     ansible.builtin.debug:
-      msg: "My name is {{Name | upper}}"
+      msg: "My name is {{Name | upper}}" ,
+  - name: working on upper filter
+    ansible.builtin.debug:
+      msg: "My name is {{ Name | lower }}"
+  - name: working on get unque numbers in a list
+    vars:
+      list: [1,2,3,4,3,2,1,5]
+    ansible.builtin.debug:
+      msg: "unique numbers are {{list | unique}}"
 
