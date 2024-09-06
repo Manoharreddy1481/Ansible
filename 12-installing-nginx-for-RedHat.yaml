@@ -1,0 +1,9 @@
+- name: install nginx for the RedHat distribution
+  hosts: web
+  become: yes
+  tasks:
+  - name: install nginx if RedHat
+    ansile.builtin.dnf:
+      name: nginx
+      state: installed
+    when: ansible_os_family=="RedHat"
