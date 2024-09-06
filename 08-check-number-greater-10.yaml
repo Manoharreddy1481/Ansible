@@ -1,6 +1,6 @@
 - name: check the prompt number is greater than 10 or not
-  hosts: local
-  connection: local
+  hosts: web
+  #connection: local
   vars_prompt:
     - name: my_number
       prompt: Enter the number
