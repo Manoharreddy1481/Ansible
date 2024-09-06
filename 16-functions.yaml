@@ -1,0 +1,8 @@
+- name: working on functions
+  hosts: local
+  connection: local
+  tasks:
+  - name: working on default functions
+    ansible.builtin.debug:
+      msg: " Hi {{ Name | default('Manohar')}}"
+      
