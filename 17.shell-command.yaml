@@ -1,0 +1,7 @@
+- name: execute the shell command
+  hosts: local
+  connection: local
+  tasks:
+  - name: execute the shell command
+    ansible.builtin.shell: ls -ltr > manohar.txt
+    
