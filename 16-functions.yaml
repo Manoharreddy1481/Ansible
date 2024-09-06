@@ -5,4 +5,9 @@
   - name: working on default functions
     ansible.builtin.debug:
       msg: " Hi {{ Name | default('Manohar')}}"
-      
+  - name: working on upper and lower filters
+    vars:
+      Name: "Manohar"
+    ansible.builtin.debug:
+      msg: "My name is {{Name | upper}}"
+
