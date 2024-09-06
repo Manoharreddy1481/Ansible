@@ -53,6 +53,6 @@
       promt: Enter your Ip Address
       private: false
     ansible.builtin.debug:
-      msg: " Ip address is : {{ name  | ansible.utils.ipv4}}"
+      msg: " Ip address is : {{ Ip_address  | ansible.utils.ipv4}}"
 
 
