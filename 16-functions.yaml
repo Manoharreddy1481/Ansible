@@ -38,4 +38,4 @@
         Name: "Devops"
         duration: "120hrs"
     ansible.builtin.debug:
-      msg: "maps to list is {{ Course | items2dict }}"
+      msg: "maps to list is {{ Course | dict2items }}"
