@@ -15,9 +15,9 @@
       Name: "Manohar"
     ansible.builtin.debug:
       msg: "My name is {{ Name | lower }}"
-  - name: working on get unque numbers in a list
-    vars:
-      list: [1,2,3,4,3,2,1,5]
-    ansible.builtin.debug:
-      msg: "unique numbers are {{list | unique}}"
+  # - name: working on get unque numbers in a list
+  #   vars:
+  #     numbers: [1,2,3,4,3,2,1,5]
+  #   ansible.builtin.debug:
+  #     msg: "unique numbers are {{ numbers | unique }}"
 
