@@ -1,5 +1,6 @@
 - name: chekc user is create dor not
   hosts: web
+  become: yes
   tasks:
     - name: check the user exist or not
       ansible.builtin.command: id expense
