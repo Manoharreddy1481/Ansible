@@ -21,3 +21,13 @@
     ansible.builtin.debug:
       msg: "unique numbers are {{ numbers | unique }}"
 
+  - name: getting minimum number in list
+    vars:
+      numbers: [1,2,3,4,0,-1]
+    ansible.builtin.debug:
+      msg: "Minimum number is :{{ numbers | min }}"
+  - name: getting maximum number in list
+    vars:
+      numbers: [1,2,3,4,0,-1]
+    ansible.builtin.debug:
+      msg: "Maximum number is :{{ numbers | max }}"
