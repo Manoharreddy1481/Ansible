@@ -12,7 +12,7 @@
   tasks:
   - name: creating ec2 instances
     amazon.aws.ec2.instance:
-      name: "{ item }"
+      name: "{{ item }}"
       vpc_subnet_id: "{{ subnet_id }}"
       instance_type: "t3.micro"
       security_group: "{{ sg_id }}"
