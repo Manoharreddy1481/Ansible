@@ -29,7 +29,7 @@
   - name: print the output
     ansible.builtin.debug:
       msg: "{{ec2_instances}}"
-  - name: update r53 records
+  - name: update r53 private records
     amazon.aws.route53:
       state: present
       zone: "{{ zone }}"
@@ -40,3 +40,14 @@
       wait: true
       overwrite: true
     loop: "{{ec2_instances.results}}"
+  - name: update r53 public records
+    amazon.aws.route53:
+      state: present
+      zone: "{{ zone }}"
+      record: "{{zone}}"
+      type: A
+      ttl: 1
+      value: "{{item.instances[0].public_ip_address}}"
+      wait: true
+      overwrite: true
+    when: "{{item.item==frontend}}"
