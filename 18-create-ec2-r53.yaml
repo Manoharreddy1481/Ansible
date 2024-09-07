@@ -17,7 +17,7 @@
       - botocore
       executable: pip3.9
   - name: creating ec2 instances
-    amazon.aws.ec2.instance:
+    amazon.aws.ec2_instance:
       name: "{{ item }}"
       vpc_subnet_id: "{{ subnet_id }}"
       instance_type: "t3.micro"
