@@ -50,4 +50,4 @@
       value: "{{item.instances[0].public_ip_address}}"
       wait: true
       overwrite: true
-    when: "{{item.item==frontend}}"
+    when: item.item=='frontend'
